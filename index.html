@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="weatherApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +7,24 @@
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- font awesome -->
-    <link rel="stylesheet" href="./fontawesome-free-5.12.0-web/css/all.min.css" />
-    <!-- extra fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet" />
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
+    <!--angular local  -->
+    <script src="/app/angular.min.js"></script>
+    <!-- script -->
+    <script src="/app/app.js"></script>
 </head>
-<body>
+<body ng-controller="WeatherController">
     <div class="background">
         <div class="layer">
-            <div class="row cardBox">
+            <!-- <div class="left search">
+                <input type="text" class="searchbox">
+                <button class="btn">search</button>
+            </div> -->
+            <div class="row cardBox left">
                 <div class="Box1">
-                    <h1 class="city">City Name</h1>
-                    <h2 class="week">weekDay</h2>
+                    <h1 class="city">{{city}}</h1>
+                    <h2 class="week">{{day}}</h2>
                     <div class="date">
                         <h3 class="date1">MAY 05<span class="space"></span> 01:11</h3>
                         <h3 class="date2"></h3>
@@ -29,42 +33,42 @@
                         <img class="icon" src="./img/icons/Rain-01.svg" alt="">
                     </div>
                     <div class="">
-                        <h1 class="left temp">53<sup>&#8451</sup> </h1>
+                        <h1 class="left temp">{{maintemp}}<sup>&#8451</sup> </h1>
                         <div class="left sidetemp">
-                            <h3>43<sup>&#8451</sup> </h3>
-                            <h3>65<sup>&#8451</sup> </h3>
+                            <h3>{{maxtemp}}<sup>&#8451</sup> </h3>
+                            <h3>{{mintemp}}<sup>&#8451</sup> </h3>
                         </div>
                     </div>
                 </div>
                 <div class="line">
                 </div>
                 <div class="box2">
-                    <h2>Rainy</h2>
+                    <h2>{{main}}</h2>
                     <div class="show left">
                         <img src="./img/icons/pressure-01.svg" alt="">
                         <h5>pressure</h5>
-                        <h3>45%</h3>
+                        <h3>{{pressure}}hPa</h3>
                     </div>
                     <div class="show left">
                         <img src="./img/icons/humidity-01.svg" alt="">
                         <h5>Humidity</h5>
-                        <h3>45%</h3>
+                        <h3>{{humidity}}%</h3>
                     </div>
                     <div class="show left">
                         <img src="./img/icons/cloud-01.svg" alt="">
                         <h5>Clouds</h5>
-                        <h3>45%</h3>
+                        <h3>{{clouds}}%</h3>
                     </div>
                     <div class="show left">
                         <img src="./img/icons/feelslike-01.svg" alt="">
                         <h5>Feels like</h5>
-                        <h3>45%</h3>
+                        <h3>{{feellike}}&#8451</h3>
                     </div>
                 </div>
                 <div class="box3">
-                    <h3>Description: <span> Feels cloudy</span></h3>
-                    <h3>Wind Speed: <span> 4.6 m/s</span></h3>
-                    <h4><span>Lat:0.64344 Long: 0.644</span></h4>
+                    <h3>Description: <span>{{desc}}</span></h3>
+                    <h3>Wind Speed: <span>{{wind}} m/s</span></h3>
+                    <h4><span>Lat:{{lat  }} Long: {{long}}</span></h4>
                 </div>
             </div>
         </div>
@@ -75,7 +79,7 @@
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
         <!-- angular -->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> -->
         <!-- bootstrap -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
             integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
