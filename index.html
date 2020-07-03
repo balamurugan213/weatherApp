@@ -17,7 +17,7 @@
 <body ng-controller="WeatherController">
     <div class="background">
         <div class="layer">
-            <div class="search">
+            <div class="search top">
                 <div class="full">
                     <form ng-submit="Changeloc()">
                         <input type="text" class="searchbox left" ng-model="cname" placeholder="Enter city name">
@@ -25,7 +25,7 @@
                     </form>
                 </div>
             </div>
-            <div class="row cardBox left">
+            <div class="row cardBox left none">
                 <div class="Box1">
                     <h1 class="city">{{city}}</h1>
                     <h2 class="week">{{day}}</h2>

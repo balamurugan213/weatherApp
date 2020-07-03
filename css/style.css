@@ -343,7 +343,7 @@ nav {
 }
 
 .background {
-	background: url(../img/Rain.jpg);
+	background: url(../img/intro-01.png);
 	/* background-image: url(../img/Clear.jpg); */
 	background-size: cover;
 	/* background-color: var(--clr-blackop); */
@@ -563,14 +563,18 @@ nav {
 	background-size: cover;
 	background-position: center;
 }
+.err {
+	background: url(../img/err-01.png);
+	background-size: cover;
+	background-position: center;
+}
 
 .search {
-	/* position: relative;
-	right: 50%;
-	transform: translatex(80%); */
 	margin-right: 2rem;
 	padding: 50px;
 	float: right;
+	position: relative;
+	transform: translateY(40%);
 }
 
 .searchbox {
@@ -594,7 +598,7 @@ nav {
 		top: 0;
 	}
 	.search {
-		padding: 30px;
+		padding: 20px;
 		position: relative;
 		left: 50%;
 		transform: translatex(-50%);
@@ -606,10 +610,18 @@ nav {
 		float: right;
 	}
 }
+
 @media screen and (min-width: 1800px) {
 	.search {
 		position: relative;
-		/* left: 50%; */
 		transform: translatex(-40%);
 	}
+}
+.none {
+	display: none;
+}
+
+.top {
+	top: 40%;
+	transform: translatex(-65%);
 }

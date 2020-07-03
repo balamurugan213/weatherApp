@@ -7,7 +7,8 @@ const picture = [
 	'Snow',
 	'Drizzle',
 	'Thunderstorm',
-	'Clouds'
+	'Clouds',
+	'err'
 ]
 
 // mgodapp.config([
@@ -62,6 +63,7 @@ weatherApp.controller('WeatherController', [
 		$scope.long = '0'
 		$scope.date = 'May 05'
 		$scope.time = '11.01'
+		$scope.dt = ''
 
 		$scope.Changeloc = function(){
 			$scope.city = $scope.cname
@@ -77,51 +79,88 @@ weatherApp.controller('WeatherController', [
 						$scope.city +
 						'&units=metric&appid=8e9951a474e2bb4235b1768ea4355398'
 				)
-				.then(function(dat){
-					$scope.weather = dat.data
-					console.log($scope.weather)
-					$scope.day = 'Sunday'
-					$scope.maintemp =
-						$scope.weather.main.temp
-					$scope.maxtemp =
-						$scope.weather.main.temp_max
-					$scope.mintemp =
-						$scope.weather.main.temp_min
-					$scope.main =
-						$scope.weather.weather[0].main
-					$scope.pressure =
-						$scope.weather.main.pressure
-					$scope.humidity =
-						$scope.weather.main.humidity
-					$scope.clouds =
-						$scope.weather.clouds.all
-					$scope.feellike =
-						$scope.weather.main.feels_like
-					$scope.desc =
-						$scope.weather.weather[0].description
-					$scope.wind = $scope.weather.wind.speed
-					$scope.lat = $scope.weather.coord.lat
-					$scope.long = $scope.weather.coord.lon
-					$scope.date = 'May 05'
-					$scope.time = '11.01'
-					const back = document.querySelector(
-						'.background'
-					)
-					const icon = document.querySelector(
-						'.icon'
-					)
-					icon.src =
-						'./img/icons/' +
-						$scope.main +
-						'-01.svg'
-					back.classList.add($scope.main)
-					picture.forEach(function(p){
-						if (p != $scope.main) {
-							back.classList.remove(p)
-						}
-					})
-				})
+				.then(
+					function(dat){
+						$scope.weather = dat.data
+						console.log($scope.weather)
+						$scope.day = 'Sunday'
+						$scope.maintemp =
+							$scope.weather.main.temp
+						$scope.maxtemp =
+							$scope.weather.main.temp_max
+						$scope.mintemp =
+							$scope.weather.main.temp_min
+						$scope.main =
+							$scope.weather.weather[0].main
+						$scope.pressure =
+							$scope.weather.main.pressure
+						$scope.humidity =
+							$scope.weather.main.humidity
+						$scope.clouds =
+							$scope.weather.clouds.all
+						$scope.feellike =
+							$scope.weather.main.feels_like
+						$scope.desc =
+							$scope.weather.weather[0].description
+						$scope.wind =
+							$scope.weather.wind.speed
+						$scope.lat =
+							$scope.weather.coord.lat
+						$scope.long =
+							$scope.weather.coord.lon
+						$scope.dt = $scope.weather.dt
+						$scope.date = new Date(
+							$scope.dt * 1000
+						)
+						console.log($scope.data)
+						const back = document.querySelector(
+							'.background'
+						)
+						const icon = document.querySelector(
+							'.icon'
+						)
+						icon.src =
+							'./img/icons/' +
+							$scope.main +
+							'-01.svg'
+						back.classList.add($scope.main)
+						picture.forEach(function(p){
+							if (p != $scope.main) {
+								back.classList.remove(p)
+							}
+						})
+						const card = document.querySelector(
+							'.cardBox'
+						)
+						const search = document.querySelector(
+							'.search'
+						)
+						card.classList.remove('none')
+						search.classList.remove('top')
+					},
+					function(){
+						const back = document.querySelector(
+							'.background'
+						)
+						console.log('wrong is right')
+						const card = document.querySelector(
+							'.cardBox'
+						)
+						const search = document.querySelector(
+							'.search'
+						)
+						search.classList.add('top')
+						card.classList.add('none')
+						$scope.main = 'err'
+						back.classList.add($scope.main)
+						picture.forEach(function(p){
+							if (p != $scope.main) {
+								back.classList.remove(p)
+							}
+						})
+					}
+				)
 		}
-		$scope.change()
+		// $scope.change()
 	}
 ])
