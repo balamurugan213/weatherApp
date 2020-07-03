@@ -181,13 +181,13 @@ p {
 .btn {
 	text-transform: uppercase;
 	background: transparent;
-	color: var(--clr-black);
-	padding: 0.375rem 0.75rem;
+	color: var(--clr-white);
+	padding: 1rem;
 	letter-spacing: var(--spacing);
 	display: inline-block;
 	transition: var(--transition);
-	font-size: 0.875rem;
-	border: 2px solid var(--clr-black);
+	font-size: 1rem;
+	border: 2px solid var(--clr-white);
 	cursor: pointer;
 	box-shadow: 0 1px 3px rgba(255, 187, 0, 0.2);
 	border-radius: var(--radius);
@@ -499,21 +499,6 @@ nav {
 	color: var(--clr-grey);
 }
 
-@media screen and (max-width: 1150px) {
-	.cardBox {
-		opacity: 0.6;
-		left: 50%;
-		width: 70%;
-		transform: translatex(-50%);
-		height: 100vh;
-	}
-	.background {
-		width: 100vw;
-		height: 100vmin;
-		top: 0;
-	}
-}
-
 /* @media screen and (max-height: 800px) {
 	.cardBox {
 		opacity: 0.6;
@@ -528,3 +513,103 @@ nav {
 		float: left;
 	}
 } */
+
+.Clouds {
+	background: url(../img/Cloud.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.Thunderstorm {
+	background: url(../img/Thunderstorm.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.Drizzle {
+	background: url(../img/Drizzle.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Rain {
+	background: url(../img/Rain.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Snow {
+	background: url(../img/Snow.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Mist {
+	background: url(../img/Mist.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.Haze {
+	background: url(../img/Haze.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.Clear {
+	background: url(../img/Clear.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.wall {
+	background: url(../img/wall2-01.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.search {
+	/* position: relative;
+	right: 50%;
+	transform: translatex(80%); */
+	margin-right: 2rem;
+	padding: 50px;
+	float: right;
+}
+
+.searchbox {
+	padding: 20px;
+	width: 30vw;
+	margin-right: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+	.cardBox {
+		opacity: 0.6;
+		left: 50%;
+		width: 70%;
+		transform: translatex(-50%);
+		height: 80vh;
+		top: 12vh;
+	}
+	.background {
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+	}
+	.search {
+		padding: 30px;
+		position: relative;
+		left: 50%;
+		transform: translatex(-50%);
+		float: left;
+		/* width: 100vw; */
+	}
+
+	.btn {
+		float: right;
+	}
+}
+@media screen and (min-width: 1800px) {
+	.search {
+		position: relative;
+		/* left: 50%; */
+		transform: translatex(-40%);
+	}
+}

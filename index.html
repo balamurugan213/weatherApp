@@ -17,10 +17,14 @@
 <body ng-controller="WeatherController">
     <div class="background">
         <div class="layer">
-            <!-- <div class="left search">
-                <input type="text" class="searchbox">
-                <button class="btn">search</button>
-            </div> -->
+            <div class="search">
+                <div class="full">
+                    <form ng-submit="Changeloc()">
+                        <input type="text" class="searchbox left" ng-model="cname" placeholder="Enter city name">
+                        <button type="submit" class="btn left">search</button>
+                    </form>
+                </div>
+            </div>
             <div class="row cardBox left">
                 <div class="Box1">
                     <h1 class="city">{{city}}</h1>
