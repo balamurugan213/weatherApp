@@ -10,9 +10,9 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
     <!--angular local  -->
-    <script src="/app/angular.min.js"></script>
+    <script src="./app/angular.min.js"></script>
     <!-- script -->
-    <script src="/app/app.js"></script>
+    <script src="./app/app.js"></script>
 </head>
 <body ng-controller="WeatherController">
     <div class="background">
@@ -20,7 +20,7 @@
             <div class="search top">
                 <div class="full">
                     <form ng-submit="Changeloc()">
-                        <input type="text" class="searchbox left" ng-model="cname" placeholder="Enter city name">
+                        <input type="text" class="searchbox left" ng-model="cname" placeholder="Enter location">
                         <button type="submit" class="btn left">search</button>
                     </form>
                 </div>
