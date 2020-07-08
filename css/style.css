@@ -31,10 +31,7 @@ Variables
 	--clr-black-10: hsl(0, 0%, 83%);
 
 	/* dark shades of primary color*/
-	--clr-yprimary-1: hsl(44, 100%, 20%);
-	--clr-yprimary-2: hsl(44, 100%, 27%);
-	--clr-yprimary-3: hsl(44, 100%, 37%);
-	--clr-yprimary-4: hsl(44, 100%, 48%);
+
 	/* primary/main color */
 	--clr-primary-5: #49a6e9;
 	/* lighter shades of primary color */
@@ -124,7 +121,7 @@ img:not(.logo) {
 	width: 100%;
 }
 img {
-	/* display: block; */
+	display: block;
 }
 
 h1,
@@ -201,11 +198,6 @@ p {
 	padding: 5rem 0;
 }
 
-.section-center {
-	width: 90vw;
-	margin: 0 auto;
-	max-width: 1170px;
-}
 @media screen and (min-width: 992px) {
 	.section-center {
 		width: 95vw;
@@ -215,108 +207,6 @@ main {
 	min-height: 100vh;
 	display: grid;
 	place-items: center;
-}
-
-/* navBar */
-nav {
-	background: var(--clr-black-6);
-	box-shadow: var(--dark-shadow);
-}
-.nav-header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 1rem;
-}
-.nav-toggle {
-	font-size: 1.5rem;
-	color: var(--clr-yprimary-6);
-	background: transparent;
-	border-color: transparent;
-	transition: var(--transition);
-	cursor: pointer;
-}
-.nav-toggle:hover {
-	color: var(--clr-yprimary-1);
-	transform: rotate(90deg);
-}
-.logo {
-	height: 40px;
-}
-.links a {
-	color: var(--clr-black-10);
-	font-size: 1rem;
-	text-transform: capitalize;
-	letter-spacing: var(--spacing);
-	display: block;
-	padding: 0.5rem 1rem;
-	transition: var(--transition);
-}
-.links a:hover {
-	background: var(--clr-yprimary-8);
-	color: var(--clr-black-5);
-	padding-left: 1.5rem;
-}
-.social-icons {
-	display: none;
-}
-/* BY DEFAULT HIDE LINKS */
-.links {
-	height: 0;
-	overflow: hidden;
-	transition: var(--transition);
-}
-/* TOGGLE CLASS */
-.show-links {
-	height: 10rem;
-}
-@media screen and (min-width: 800px) {
-	.nav-center {
-		max-width: 1170px;
-		margin: 0 auto;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 1rem;
-	}
-	.nav-header {
-		padding: 0;
-	}
-	.nav-toggle {
-		display: none;
-	}
-	.links {
-		/* IMPORTANT TO ADD */
-		height: auto;
-		display: flex;
-	}
-	.links a {
-		padding: 0;
-		margin: 0 0.5rem;
-	}
-	.links a:hover {
-		padding: 0;
-		background: transparent;
-		color: var(--clr-yprimary-8);
-		margin: 0 0.9rem;
-		font-size: 1.1rem;
-	}
-	.social-icons {
-		display: flex;
-	}
-
-	.social-icons li {
-		margin: 0 0.5rem;
-	}
-
-	.social-icons a {
-		/* margin: 0.5rem; */
-		color: var(--clr-yprimary-6);
-		transition: var(--transition);
-	}
-	.social-icons a:hover {
-		color: var(--clr-black-10);
-	}
 }
 
 .a {
@@ -343,6 +233,8 @@ nav {
 }
 
 .background {
+	animation: fade 1s 0.2s ease-out forwards;
+	opacity: 0;
 	background: url(../img/intro-01.png);
 	/* background-image: url(../img/Clear.jpg); */
 	background-size: cover;
@@ -359,11 +251,13 @@ nav {
 }
 
 .cardBox {
+	animation: fade-slide-up 1s 0.2s ease-out forwards;
 	position: absolute;
 	background-color: var(--clr-white);
 	width: 500px;
 	height: 96vh;
 	left: 4vw;
+	opacity: 0;
 	/* overflow: hidden; */
 	overflow: auto;
 }
@@ -515,55 +409,65 @@ nav {
 } */
 
 .Clouds {
+	animation: fade 1s 0.2s ease-out forwards;
 	background: url(../img/Cloud.jpg);
 	background-size: cover;
 	background-position: center;
 }
 .Thunderstorm {
+	animation: fade 1s 0.2s ease-out forwards;
 	background: url(../img/Thunderstorm.jpg);
 	background-size: cover;
 	background-position: center;
 }
 .Drizzle {
+	animation: fade 1s 0.2s ease-out forwards;
 	background: url(../img/Drizzle.jpg);
 	background-size: cover;
 	background-position: center;
 }
 
 .Rain {
+	animation: fade 1s 0.2s ease-out forwards;
 	background: url(../img/Rain.jpg);
 	background-size: cover;
 	background-position: center;
 }
 
 .Snow {
+	animation: fade 1s 0.2s ease-out forwards;
 	background: url(../img/Snow.jpg);
 	background-size: cover;
 	background-position: center;
 }
 
 .Mist {
+	animation: fade 1s 0.2s ease-out forwards;
 	background: url(../img/Mist.jpg);
 	background-size: cover;
 	background-position: center;
 }
 
 .Haze {
+	animation: fade 1s 0.2s ease-out forwards;
 	background: url(../img/Haze.jpg);
 	background-size: cover;
 	background-position: center;
 }
 .Clear {
+	animation: fade 1s 0.2s ease-out forwards;
 	background: url(../img/Clear.jpg);
 	background-size: cover;
 	background-position: center;
 }
 .wall {
+	animation: fade 1s 0.2s ease-out forwards;
 	background: url(../img/wall2-01.png);
 	background-size: cover;
 	background-position: center;
 }
 .err {
+	animation: fade 1s 0.2s ease-out forwards;
 	background: url(../img/errr-01.png);
 	background-size: cover;
 	background-position: center;
@@ -583,14 +487,18 @@ nav {
 	margin-right: 30px;
 }
 
+/* The starting CSS styles for the enter animation */
+
 @media screen and (max-width: 1200px) {
 	.cardBox {
-		opacity: 0.6;
+		animation: fade-slide-upp 1s 1s ease-out forwards;
+		opacity: 0;
 		left: 50%;
 		width: 70%;
 		transform: translatex(-50%);
 		height: 80vh;
 		top: 12vh;
+		/* opacity: 0; */
 	}
 	.background {
 		width: 100vw;
@@ -617,6 +525,30 @@ nav {
 		transform: translatex(-40%);
 	}
 }
+
+@media screen and (max-width: 500px) {
+	.cardBox {
+		position: relative;
+		top: 0vh;
+		width: 100vw;
+		/* height: 88vh; */
+		/* transform: none; */
+		transform: translateX(-47vw);
+	}
+	.searchbox {
+		width: 50vw;
+		margin: 10px;
+		padding: .2rem;
+	}
+	.btn {
+		padding: 0.2rem;
+		margin: 10px;
+	}
+	.search {
+		padding: 5px;
+		margin: auto;
+	}
+}
 .none {
 	display: none;
 }
@@ -624,4 +556,49 @@ nav {
 .top {
 	top: 40%;
 	transform: translatex(-65%);
+}
+.cardBox.ng-enter {
+	transition: 2.5s linear all;
+	opacity: 0;
+	transform: translateY(50px);
+}
+
+/* The finishing CSS styles for the enter animation */
+.cardBox.ng-enter.ng-enter-active {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+@keyframes fade-slide-up {
+	0% {
+		opacity: 0;
+		transform: translateY(4rem);
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes fade-slide-upp {
+	0% {
+		opacity: 0;
+		transform: translateY(4rem);
+		/* transform: translatex(-50%); */
+	}
+	100% {
+		/* transform: translateY(0);
+		transform: translatex(-50%); */
+
+		opacity: 0.6;
+	}
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

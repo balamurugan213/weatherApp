@@ -1,4 +1,6 @@
-var weatherApp = angular.module('weatherApp', [])
+var weatherApp = angular.module('weatherApp', [
+	'ngAnimate'
+])
 const picture = [
 	'Clear',
 	'Rain',
@@ -9,6 +11,29 @@ const picture = [
 	'Thunderstorm',
 	'Clouds',
 	'err'
+]
+const week = [
+	'Sunday',
+	'Monday',
+	'Teusday',
+	'wednesday',
+	'thursday',
+	'Friday',
+	'Saturday'
+]
+const month = [
+	'jan',
+	'FEB',
+	'MAR',
+	'APR',
+	'MAY',
+	'JUN',
+	'JUL',
+	'AUG',
+	'SEP',
+	'OCT',
+	'NOV',
+	'DEC'
 ]
 
 // mgodapp.config([
@@ -109,10 +134,15 @@ weatherApp.controller('WeatherController', [
 						$scope.long =
 							$scope.weather.coord.lon
 						$scope.dt = $scope.weather.dt
-						$scope.date = new Date(
-							$scope.dt * 1000
-						)
-						console.log($scope.data)
+						$scope.date = new Date()
+						$scope.mon =
+							month[$scope.date.getMonth()]
+						$scope.day =
+							week[$scope.date.getDay()]
+						$scope.dat = $scope.date.getDate()
+						$scope.hr = $scope.date.getHours()
+						$scope.min = $scope.date.getMinutes()
+
 						const back = document.querySelector(
 							'.background'
 						)
