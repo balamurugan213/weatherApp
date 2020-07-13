@@ -37,5 +37,5 @@ $http
 ## when input is wrong
 ![output](./weathere.gif)
 
-## Responsiv using media query
+## Responsive using media query
 ![output](./weatherapp.gif)
