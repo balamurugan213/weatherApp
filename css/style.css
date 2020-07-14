@@ -29,48 +29,9 @@ Variables
 	--clr-black-8: hsl(0, 0%, 43%);
 	--clr-black-9: hsl(0, 0%, 60%);
 	--clr-black-10: hsl(0, 0%, 83%);
-
-	/* dark shades of primary color*/
-
-	/* primary/main color */
-	--clr-primary-5: #49a6e9;
-	/* lighter shades of primary color */
-	--clr-yprimary-6: hsl(44, 100%, 50%);
-	--clr-yprimary-7: hsl(44, 100%, 58%);
-	--clr-yprimary-8: hsl(44, 100%, 67%);
-	--clr-yprimary-9: hsl(44, 100%, 72%);
-	--clr-yprimary-10: hsl(44, 100%, 83%);
-
-	/* dark shades of primary color*/
-	--clr-primary-1: hsl(205, 86%, 17%);
-	--clr-primary-2: hsl(205, 77%, 27%);
-	--clr-primary-3: hsl(205, 72%, 37%);
-	--clr-primary-4: hsl(205, 63%, 48%);
-	/* primary/main color */
-	--clr-primary-5: #49a6e9;
-	/* lighter shades of primary color */
-	--clr-primary-6: hsl(205, 89%, 70%);
-	--clr-primary-7: hsl(205, 90%, 76%);
-	--clr-primary-8: hsl(205, 86%, 81%);
-	--clr-primary-9: hsl(205, 90%, 88%);
-	--clr-primary-10: hsl(205, 100%, 96%);
-	/* darkest grey - used for headings */
-	--clr-grey-1: hsl(209, 61%, 16%);
-	/* --clr-grey-2: hsl(211, 39%, 23%); */
-	--clr-grey-3: hsl(209, 34%, 30%);
-	--clr-grey-4: hsl(209, 28%, 39%);
-	/* grey used for paragraphs */
-	--clr-grey-5: hsl(210, 22%, 49%);
-	--clr-grey-6: hsl(209, 23%, 60%);
-	--clr-grey-7: hsl(211, 27%, 70%);
-	--clr-grey-8: hsl(210, 31%, 80%);
 	--clr-grey-2: hsl(0, 0%, 94%);
 	--clr-grey: hsl(0, 0%, 81%);
 	--clr-white: #fff;
-	--clr-red-dark: hsl(360, 67%, 44%);
-	--clr-red-light: hsl(360, 71%, 66%);
-	--clr-green-dark: hsl(125, 67%, 44%);
-	--clr-green-light: hsl(125, 71%, 66%);
 	--clr-gold: #c59d5f;
 	--clr-black: #222;
 	--clr-blackop: #2222228e;
@@ -207,29 +168,6 @@ main {
 	min-height: 100vh;
 	display: grid;
 	place-items: center;
-}
-
-.a {
-	font-family: var(--ff-Roboto);
-}
-
-.b {
-	font-family: var(--ff-RobotoLight);
-}
-.c {
-	font-family: var(--ff-RobotoThin);
-}
-.d {
-	font-family: var(--ff-RobotoMedium);
-}
-.e {
-	font-family: var(--ff-RobotoItalic);
-}
-.f {
-	font-family: var(--ff-RobotoBlack);
-}
-.g {
-	font-family: var(--ff-RobotoBold);
 }
 
 .background {
